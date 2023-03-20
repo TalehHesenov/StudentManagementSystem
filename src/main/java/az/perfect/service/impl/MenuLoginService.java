@@ -13,7 +13,7 @@ public class MenuLoginService implements MenuLoginServiceInter{
        Scanner sc = new Scanner (System.in);
         System.out.print("Enter UserName:");
         String userName =sc.next();
-        System.out.print("Enter Password");
+        System.out.print("Enter Password:");
         String password = sc.next();
         if (!(userName.equals("admin")&&password.equals("123"))) {
             System.exit(0);

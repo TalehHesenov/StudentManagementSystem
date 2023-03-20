@@ -1,8 +1,10 @@
 
 package az.perfect.beans;
 
+import java.io.Serializable;
 
-public abstract class Person {
+
+public abstract class Person implements Serializable{
     private String name;
     private String surname;
     private int age;

@@ -18,7 +18,7 @@ public enum Menu {
     ADD_TEACHER(4,"Add Teacher",new MenuAddTeacherService()),
     SHOW_STUDENT(5,"Show All Student",new MenuShowStudentService()),
     SHOW_TEACHER(6,"Show All Teacher",new MenuShowTeacherService()),
-    EXIT(7,"Exit",null),
+    EXIT(7,"Exit",  null),
     UNKNOWN(new MenuUnknownService());
 
     private Menu(MenuService service) {

@@ -9,7 +9,19 @@ public class MenuUtil {
     Menu m[] = Menu.values();
         for (int i = 0; i < m.length; i++) {
             if (m[i]!=Menu.UNKNOWN) {
-                  System.out.println(m[i]);
+                if (m[i]==Menu.LOGIN||m[i]==Menu.REGISTRY) {
+                    if (!Config.isLoggedIn()) {
+                     System.out.println(m[i]);    
+                    }
+                    
+                    
+                    
+                }else if (Config.isLoggedIn()) {
+                    
+                     System.out.println(m[i]);    
+                    
+                }
+                  
             }
           
         }

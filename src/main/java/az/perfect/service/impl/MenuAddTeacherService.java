@@ -13,15 +13,15 @@ public class MenuAddTeacherService implements MenuLoginServiceInter{
     @Override
     public void process() {
         Scanner sc = new Scanner (System.in);
-        System.out.println("Enter Name");
+        System.out.print("Enter Name:");
         String name = sc.next();
-        System.out.println("Enter Surname");
+        System.out.print("Enter Surname:");
         String surname = sc.next();
-        System.out.println("Enter Age");
+        System.out.print("Enter Age:");
         int age = sc.nextInt();
-         System.out.println("Enter School Name");
+         System.out.print("Enter School Name:");
         String schoolName = sc.next();
-        System.out.println("Enter Salary");
+        System.out.print("Enter Salary:");
         double salary= sc.nextInt();
         
         
@@ -34,7 +34,7 @@ public class MenuAddTeacherService implements MenuLoginServiceInter{
        
         Config.instance().setTeachers(tc);
                 
-                        
+            Config.save();            
     }
     
 }

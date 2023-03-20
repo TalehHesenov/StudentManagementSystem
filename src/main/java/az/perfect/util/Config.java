@@ -3,15 +3,30 @@ package az.perfect.util;
 
 import az.perfect.beans.Student;
 import az.perfect.beans.Teacher;
+import java.io.Serializable;
 import java.util.LinkedList;
 
 
-public class Config {
+public class Config implements Serializable{
     private LinkedList<Teacher> teachers = new LinkedList<>();
     private LinkedList<Student> students =new LinkedList<>();
     public static Config config = null;
-    public static boolean loggedIn;
+    private static boolean loggedIn;
+    public static void initialize(){
+    
+   Object obj = FileUtility.readObjectFromFile("app.obj");
+        if (obj instanceof Config) {
+            config = (Config) obj;
+            
+        }
+    
+    }
 
+    public static  void save(){
+    FileUtility.writeObjectToFile(Config.instance(), "app.obj");
+    
+    }
+    
     public static Config getConfig() {
         return config;
     }
