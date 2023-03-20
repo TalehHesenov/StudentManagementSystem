@@ -1,0 +1,6 @@
+az\perfect\main\StudentManagementSystem.class
+az\perfect\util\MenuUtil.class
+az\perfect\beans\Person.class
+az\perfect\beans\Student.class
+az\perfect\beans\Teacher.class
+az\perfect\util\Menu.class
